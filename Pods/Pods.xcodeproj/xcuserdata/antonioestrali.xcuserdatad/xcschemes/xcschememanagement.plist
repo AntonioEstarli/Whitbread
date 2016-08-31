@@ -4,29 +4,18 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-QuadratTouch.xcscheme</key>
+		<key>Pods-Whitbread.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>QuadratTouch.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>D74ED4AA8A3C7244586226D9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FE6273499B1C4E5DE0FDA358</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>
