@@ -14,6 +14,8 @@
 		1D3C7EE11D77262D0078EBDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D3C7EDF1D77262D0078EBDB /* LaunchScreen.storyboard */; };
 		1D3C7EEC1D77262D0078EBDB /* WhitbreadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3C7EEB1D77262D0078EBDB /* WhitbreadTests.swift */; };
 		1DE354721D7770BF0090D559 /* FoursquareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE354711D7770BF0090D559 /* FoursquareManager.swift */; };
+		1DE354751D777FA40090D559 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE354741D777FA40090D559 /* Venue.swift */; };
+		1DE354781D7783900090D559 /* VenueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE354771D7783900090D559 /* VenueTests.swift */; };
 		F5A7313652D5DF22D9D30D90 /* Pods_Whitbread.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B887DACBA7F23943D45B6CA /* Pods_Whitbread.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		1D3C7EEB1D77262D0078EBDB /* WhitbreadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhitbreadTests.swift; sourceTree = "<group>"; };
 		1D3C7EED1D77262D0078EBDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DE354711D7770BF0090D559 /* FoursquareManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareManager.swift; sourceTree = "<group>"; };
+		1DE354741D777FA40090D559 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		1DE354771D7783900090D559 /* VenueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueTests.swift; sourceTree = "<group>"; };
 		4B887DACBA7F23943D45B6CA /* Pods_Whitbread.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whitbread.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6B3FE0DD5380E9F96AC57CA /* Pods-Whitbread.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whitbread.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whitbread/Pods-Whitbread.debug.xcconfig"; sourceTree = "<group>"; };
 		F872523E40E09654E2E490DF /* Pods-Whitbread.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whitbread.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whitbread/Pods-Whitbread.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +90,7 @@
 		1D3C7ED51D77262C0078EBDB /* Whitbread */ = {
 			isa = PBXGroup;
 			children = (
+				1DE354731D777F8A0090D559 /* Model */,
 				1D3C7ED61D77262D0078EBDB /* AppDelegate.swift */,
 				1D3C7ED81D77262D0078EBDB /* ViewController.swift */,
 				1D3C7EDA1D77262D0078EBDB /* Main.storyboard */,
@@ -100,10 +105,27 @@
 		1D3C7EEA1D77262D0078EBDB /* WhitbreadTests */ = {
 			isa = PBXGroup;
 			children = (
+				1DE354761D7783600090D559 /* Model */,
 				1D3C7EEB1D77262D0078EBDB /* WhitbreadTests.swift */,
 				1D3C7EED1D77262D0078EBDB /* Info.plist */,
 			);
 			path = WhitbreadTests;
+			sourceTree = "<group>";
+		};
+		1DE354731D777F8A0090D559 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1DE354741D777FA40090D559 /* Venue.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1DE354761D7783600090D559 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1DE354771D7783900090D559 /* VenueTests.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		70AC2E0FF6B1691EDCE60444 /* Frameworks */ = {
@@ -276,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D3C7ED91D77262D0078EBDB /* ViewController.swift in Sources */,
+				1DE354751D777FA40090D559 /* Venue.swift in Sources */,
 				1DE354721D7770BF0090D559 /* FoursquareManager.swift in Sources */,
 				1D3C7ED71D77262D0078EBDB /* AppDelegate.swift in Sources */,
 			);
@@ -286,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D3C7EEC1D77262D0078EBDB /* WhitbreadTests.swift in Sources */,
+				1DE354781D7783900090D559 /* VenueTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
