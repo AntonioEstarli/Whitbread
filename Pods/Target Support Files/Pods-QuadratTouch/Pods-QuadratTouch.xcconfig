@@ -1,0 +1,1 @@
+PODS_QUADRATTOUCH_OTHER_LDFLAGS = -framework "SystemConfiguration"
