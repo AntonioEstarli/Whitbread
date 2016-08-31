@@ -13,7 +13,7 @@
 		1D3C7EDE1D77262D0078EBDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D3C7EDD1D77262D0078EBDB /* Assets.xcassets */; };
 		1D3C7EE11D77262D0078EBDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D3C7EDF1D77262D0078EBDB /* LaunchScreen.storyboard */; };
 		1D3C7EEC1D77262D0078EBDB /* WhitbreadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3C7EEB1D77262D0078EBDB /* WhitbreadTests.swift */; };
-		1D3C7EF91D7737AE0078EBDB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1D3C7EF81D7737AE0078EBDB /* Podfile */; };
+		1DE354721D7770BF0090D559 /* FoursquareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE354711D7770BF0090D559 /* FoursquareManager.swift */; };
 		F5A7313652D5DF22D9D30D90 /* Pods_Whitbread.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B887DACBA7F23943D45B6CA /* Pods_Whitbread.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +38,7 @@
 		1D3C7EE71D77262D0078EBDB /* WhitbreadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhitbreadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D3C7EEB1D77262D0078EBDB /* WhitbreadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhitbreadTests.swift; sourceTree = "<group>"; };
 		1D3C7EED1D77262D0078EBDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1D3C7EF81D7737AE0078EBDB /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		1DE354711D7770BF0090D559 /* FoursquareManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareManager.swift; sourceTree = "<group>"; };
 		4B887DACBA7F23943D45B6CA /* Pods_Whitbread.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whitbread.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6B3FE0DD5380E9F96AC57CA /* Pods-Whitbread.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whitbread.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whitbread/Pods-Whitbread.debug.xcconfig"; sourceTree = "<group>"; };
 		F872523E40E09654E2E490DF /* Pods-Whitbread.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whitbread.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whitbread/Pods-Whitbread.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 				1D3C7EDD1D77262D0078EBDB /* Assets.xcassets */,
 				1D3C7EDF1D77262D0078EBDB /* LaunchScreen.storyboard */,
 				1D3C7EE21D77262D0078EBDB /* Info.plist */,
-				1D3C7EF81D7737AE0078EBDB /* Podfile */,
+				1DE354711D7770BF0090D559 /* FoursquareManager.swift */,
 			);
 			path = Whitbread;
 			sourceTree = "<group>";
@@ -209,7 +209,6 @@
 			files = (
 				1D3C7EE11D77262D0078EBDB /* LaunchScreen.storyboard in Resources */,
 				1D3C7EDE1D77262D0078EBDB /* Assets.xcassets in Resources */,
-				1D3C7EF91D7737AE0078EBDB /* Podfile in Resources */,
 				1D3C7EDC1D77262D0078EBDB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D3C7ED91D77262D0078EBDB /* ViewController.swift in Sources */,
+				1DE354721D7770BF0090D559 /* FoursquareManager.swift in Sources */,
 				1D3C7ED71D77262D0078EBDB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
