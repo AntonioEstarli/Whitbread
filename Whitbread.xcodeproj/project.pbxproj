@@ -20,6 +20,7 @@
 		1DE3547F1D7798970090D559 /* VenueParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE3547E1D7798970090D559 /* VenueParser.swift */; };
 		1DE354821D77A7B50090D559 /* VenueParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE354811D77A7B50090D559 /* VenueParserTests.swift */; };
 		1DE354841D782A120090D559 /* FoursquareManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE354831D782A120090D559 /* FoursquareManagerTests.swift */; };
+		1DE354861D783AF90090D559 /* VenueListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE354851D783AF90090D559 /* VenueListDataProvider.swift */; };
 		F5A7313652D5DF22D9D30D90 /* Pods_Whitbread.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B887DACBA7F23943D45B6CA /* Pods_Whitbread.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		1DE3547E1D7798970090D559 /* VenueParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueParser.swift; sourceTree = "<group>"; };
 		1DE354811D77A7B50090D559 /* VenueParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueParserTests.swift; sourceTree = "<group>"; };
 		1DE354831D782A120090D559 /* FoursquareManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareManagerTests.swift; sourceTree = "<group>"; };
+		1DE354851D783AF90090D559 /* VenueListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueListDataProvider.swift; sourceTree = "<group>"; };
 		4B887DACBA7F23943D45B6CA /* Pods_Whitbread.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whitbread.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6B3FE0DD5380E9F96AC57CA /* Pods-Whitbread.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whitbread.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whitbread/Pods-Whitbread.debug.xcconfig"; sourceTree = "<group>"; };
 		F872523E40E09654E2E490DF /* Pods-Whitbread.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whitbread.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whitbread/Pods-Whitbread.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				1D3C7ED81D77262D0078EBDB /* ViewController.swift */,
+				1DE354851D783AF90090D559 /* VenueListDataProvider.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				1DE354751D777FA40090D559 /* Venue.swift in Sources */,
 				1DE354721D7770BF0090D559 /* FoursquareManager.swift in Sources */,
 				1D3C7ED71D77262D0078EBDB /* AppDelegate.swift in Sources */,
+				1DE354861D783AF90090D559 /* VenueListDataProvider.swift in Sources */,
 				1DE3547C1D778B6E0090D559 /* VenueCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

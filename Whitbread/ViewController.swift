@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    var dataProvider: VenueListDataProvider!
     
     lazy var tapRecognizer: UITapGestureRecognizer = {
         var recognizer = UITapGestureRecognizer(target:self,
@@ -19,11 +20,14 @@ class ViewController: UIViewController {
         return recognizer
     }()
     
-    var searchResults = [Venue]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // set up data provider
+        dataProvider = VenueListDataProvider()
+        tableView.dataSource = dataProvider
+        
+        // set up table view
         tableView.allowsSelection = false
         tableView.tableFooterView = UIView()
     }
@@ -46,9 +50,11 @@ extension ViewController: UISearchBarDelegate {
         
         FoursquareManager.sharedInstance.getVenues(searchBar.text!) { (venues) in
             
-            self.searchResults.removeAll()
-            self.searchResults.appendContentsOf(venues)
+            // update data
+            self.dataProvider.searchResults.removeAll()
+            self.dataProvider.searchResults.appendContentsOf(venues)
             
+            // reload table view
             dispatch_async(dispatch_get_main_queue()) {
                 self.tableView.reloadData()
                 self.tableView.setContentOffset(CGPointZero, animated: false)
@@ -64,25 +70,3 @@ extension ViewController: UISearchBarDelegate {
         view.removeGestureRecognizer(tapRecognizer)
     }
 }
-
-// MARK:- UITableViewDataSource
-
-extension ViewController: UITableViewDataSource {
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchResults.count
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("VenueCell", forIndexPath: indexPath) as! VenueCell
-        
-        let venue = searchResults[indexPath.row]
-        
-        // Configure cell
-        cell.nameLabel.text = venue.name
-        cell.addressLabel.text = venue.address
-        
-        return cell
-    }
-}
-

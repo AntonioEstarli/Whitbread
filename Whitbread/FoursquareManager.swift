@@ -20,8 +20,8 @@ private struct Constants {
 /**
  *  Utility class to deal with Foursquare
  */
-class FoursquareManager
-{
+class FoursquareManager {
+    
     static let sharedInstance = FoursquareManager()
     var session:Session?
     var searchTask:Task?
