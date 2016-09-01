@@ -15,14 +15,21 @@ Please be patient, it can take a while to install cocoa pods.
 * **das-quadrat**
 
 https://github.com/Constantine-Fry/das-quadrat
+
 Das-Quadrant is a Swift wrapper for Foursquare API. To install it, you’ll use cocoa pods.
 
 1) Open Terminal
+
 2) Type cd (c-d-space)
+
 3) Open Finder
+
 4) Locate your project root directory in Finder, but don’t go into it.
+
 5) Drag-and-drop the project directory from Finder to Terminal.
+
 6) Most likely, the absolute path will now appear next to cd.
+
 7) Press the enter key
 
 You’ve now cd-ed into the right directory!
