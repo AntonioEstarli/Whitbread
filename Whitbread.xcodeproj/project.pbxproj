@@ -17,6 +17,9 @@
 		1DE354751D777FA40090D559 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE354741D777FA40090D559 /* Venue.swift */; };
 		1DE354781D7783900090D559 /* VenueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE354771D7783900090D559 /* VenueTests.swift */; };
 		1DE3547C1D778B6E0090D559 /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE3547B1D778B6E0090D559 /* VenueCell.swift */; };
+		1DE3547F1D7798970090D559 /* VenueParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE3547E1D7798970090D559 /* VenueParser.swift */; };
+		1DE354821D77A7B50090D559 /* VenueParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE354811D77A7B50090D559 /* VenueParserTests.swift */; };
+		1DE354841D782A120090D559 /* FoursquareManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE354831D782A120090D559 /* FoursquareManagerTests.swift */; };
 		F5A7313652D5DF22D9D30D90 /* Pods_Whitbread.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B887DACBA7F23943D45B6CA /* Pods_Whitbread.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +48,9 @@
 		1DE354741D777FA40090D559 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		1DE354771D7783900090D559 /* VenueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueTests.swift; sourceTree = "<group>"; };
 		1DE3547B1D778B6E0090D559 /* VenueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
+		1DE3547E1D7798970090D559 /* VenueParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueParser.swift; sourceTree = "<group>"; };
+		1DE354811D77A7B50090D559 /* VenueParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueParserTests.swift; sourceTree = "<group>"; };
+		1DE354831D782A120090D559 /* FoursquareManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareManagerTests.swift; sourceTree = "<group>"; };
 		4B887DACBA7F23943D45B6CA /* Pods_Whitbread.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whitbread.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6B3FE0DD5380E9F96AC57CA /* Pods-Whitbread.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whitbread.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whitbread/Pods-Whitbread.debug.xcconfig"; sourceTree = "<group>"; };
 		F872523E40E09654E2E490DF /* Pods-Whitbread.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whitbread.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whitbread/Pods-Whitbread.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,12 +101,12 @@
 				1DE354731D777F8A0090D559 /* Model */,
 				1DE3547A1D778B510090D559 /* View */,
 				1DE354791D77853C0090D559 /* Controller */,
+				1DE3547D1D778F480090D559 /* Utils */,
 				1D3C7ED61D77262D0078EBDB /* AppDelegate.swift */,
 				1D3C7EDA1D77262D0078EBDB /* Main.storyboard */,
 				1D3C7EDD1D77262D0078EBDB /* Assets.xcassets */,
 				1D3C7EDF1D77262D0078EBDB /* LaunchScreen.storyboard */,
 				1D3C7EE21D77262D0078EBDB /* Info.plist */,
-				1DE354711D7770BF0090D559 /* FoursquareManager.swift */,
 			);
 			path = Whitbread;
 			sourceTree = "<group>";
@@ -109,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				1DE354761D7783600090D559 /* Model */,
+				1DE354801D77A7880090D559 /* Utils */,
 				1D3C7EEB1D77262D0078EBDB /* WhitbreadTests.swift */,
 				1D3C7EED1D77262D0078EBDB /* Info.plist */,
 			);
@@ -145,6 +152,24 @@
 				1DE3547B1D778B6E0090D559 /* VenueCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		1DE3547D1D778F480090D559 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1DE354711D7770BF0090D559 /* FoursquareManager.swift */,
+				1DE3547E1D7798970090D559 /* VenueParser.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		1DE354801D77A7880090D559 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1DE354811D77A7B50090D559 /* VenueParserTests.swift */,
+				1DE354831D782A120090D559 /* FoursquareManagerTests.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		70AC2E0FF6B1691EDCE60444 /* Frameworks */ = {
@@ -316,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DE3547F1D7798970090D559 /* VenueParser.swift in Sources */,
 				1D3C7ED91D77262D0078EBDB /* ViewController.swift in Sources */,
 				1DE354751D777FA40090D559 /* Venue.swift in Sources */,
 				1DE354721D7770BF0090D559 /* FoursquareManager.swift in Sources */,
@@ -330,6 +356,8 @@
 			files = (
 				1D3C7EEC1D77262D0078EBDB /* WhitbreadTests.swift in Sources */,
 				1DE354781D7783900090D559 /* VenueTests.swift in Sources */,
+				1DE354841D782A120090D559 /* FoursquareManagerTests.swift in Sources */,
+				1DE354821D77A7B50090D559 /* VenueParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

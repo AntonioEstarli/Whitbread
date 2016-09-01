@@ -8,6 +8,8 @@
 
 import QuadratTouch
 
+typealias VenueCompletionHandler = (venues: [Venue]) -> Void
+
 private struct Constants {
     struct Client {
         static let ID = "SDCLZCRXW44TTDQRQHBP3OL2F0CGOPJGIUVRH5W5BABOTFCT"
@@ -15,10 +17,14 @@ private struct Constants {
     }
 }
 
+/**
+ *  Utility class to deal with Foursquare
+ */
 class FoursquareManager
 {
     static let sharedInstance = FoursquareManager()
     var session:Session?
+    var searchTask:Task?
     
     //MARK:- Iniatializer
     
@@ -35,21 +41,26 @@ class FoursquareManager
         self.session = Session.sharedSession()
     }
     
-    //MARK: - 
+    //MARK:-
     
-    // quick test
-    func testAPI() {
-
-        var parameters = [Parameter.query:"Burgers"]
-        parameters += [Parameter.near:"Massachusetts"]
-        //parameters += self.location.parameters()
-        let searchTask = self.session!.venues.search(parameters) {
-            (result) -> Void in
+    func getVenues(place: String, completionHandler: VenueCompletionHandler) {
+        
+        // cancel previous task if any
+        if searchTask != nil {
+            searchTask!.cancel()
+        }
+        
+        let parameters = [Parameter.near:place]
+        searchTask = self.session!.venues.search(parameters) {
+            (result) in
             if let response = result.response {
-                print("response: \(response)")
-                //self.venues = response["venues"] as [JSONParameters]?
+                
+                // parse response into array of venues
+                let venues = VenueParser.parseVenuesFromJSON(response)
+                
+                completionHandler(venues: venues)
             }
         }
-        searchTask.start()
+        searchTask!.start()
     }
 }

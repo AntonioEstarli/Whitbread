@@ -6,6 +6,9 @@
 //  Copyright © 2016 Antonio.Estrali. All rights reserved.
 //
 
+/**
+ *  Utility class to parse a JSON response into Venues
+ */
 class VenueParser {
     
     class func parseVenuesFromJSON(object: [String:AnyObject]) -> [Venue] {
