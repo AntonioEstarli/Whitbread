@@ -13,11 +13,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    lazy var tapRecognizer: UITapGestureRecognizer = {
+        var recognizer = UITapGestureRecognizer(target:self,
+                                                action: #selector(ViewController.dismissKeyboard))
+        return recognizer
+    }()
+    
     var searchResults = [Venue]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        tableView.allowsSelection = false
+        tableView.tableFooterView = UIView()
     }
 
     // MARK: Keyboard
@@ -46,6 +54,14 @@ extension ViewController: UISearchBarDelegate {
                 self.tableView.setContentOffset(CGPointZero, animated: false)
             }
         }
+    }
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        view.addGestureRecognizer(tapRecognizer)
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        view.removeGestureRecognizer(tapRecognizer)
     }
 }
 
