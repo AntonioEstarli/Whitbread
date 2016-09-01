@@ -12,7 +12,6 @@
 		1D3C7EDC1D77262D0078EBDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D3C7EDA1D77262D0078EBDB /* Main.storyboard */; };
 		1D3C7EDE1D77262D0078EBDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D3C7EDD1D77262D0078EBDB /* Assets.xcassets */; };
 		1D3C7EE11D77262D0078EBDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D3C7EDF1D77262D0078EBDB /* LaunchScreen.storyboard */; };
-		1D3C7EEC1D77262D0078EBDB /* WhitbreadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3C7EEB1D77262D0078EBDB /* WhitbreadTests.swift */; };
 		1DE354721D7770BF0090D559 /* FoursquareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE354711D7770BF0090D559 /* FoursquareManager.swift */; };
 		1DE354751D777FA40090D559 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE354741D777FA40090D559 /* Venue.swift */; };
 		1DE354781D7783900090D559 /* VenueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE354771D7783900090D559 /* VenueTests.swift */; };
@@ -43,7 +42,6 @@
 		1D3C7EE01D77262D0078EBDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D3C7EE21D77262D0078EBDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D3C7EE71D77262D0078EBDB /* WhitbreadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhitbreadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D3C7EEB1D77262D0078EBDB /* WhitbreadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhitbreadTests.swift; sourceTree = "<group>"; };
 		1D3C7EED1D77262D0078EBDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DE354711D7770BF0090D559 /* FoursquareManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareManager.swift; sourceTree = "<group>"; };
 		1DE354741D777FA40090D559 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 			children = (
 				1DE354761D7783600090D559 /* Model */,
 				1DE354801D77A7880090D559 /* Utils */,
-				1D3C7EEB1D77262D0078EBDB /* WhitbreadTests.swift */,
 				1D3C7EED1D77262D0078EBDB /* Info.plist */,
 			);
 			path = WhitbreadTests;
@@ -358,7 +355,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D3C7EEC1D77262D0078EBDB /* WhitbreadTests.swift in Sources */,
 				1DE354781D7783900090D559 /* VenueTests.swift in Sources */,
 				1DE354841D782A120090D559 /* FoursquareManagerTests.swift in Sources */,
 				1DE354821D77A7B50090D559 /* VenueParserTests.swift in Sources */,

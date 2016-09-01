@@ -15,8 +15,7 @@ class ViewController: UIViewController {
     var dataProvider: VenueListDataProvider!
     
     lazy var tapRecognizer: UITapGestureRecognizer = {
-        var recognizer = UITapGestureRecognizer(target:self,
-                                                action: #selector(ViewController.dismissKeyboard))
+        var recognizer = UITapGestureRecognizer(target:self, action: #selector(ViewController.dismissKeyboard))
         return recognizer
     }()
     

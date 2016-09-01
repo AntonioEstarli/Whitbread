@@ -27,6 +27,8 @@ extension VenueListDataProvider: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("VenueCell", forIndexPath: indexPath) as! VenueCell
         
+        guard indexPath.row < searchResults.count else { return cell }
+        
         let venue = searchResults[indexPath.row]
         
         // Configure cell
