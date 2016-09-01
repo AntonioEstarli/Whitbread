@@ -7,29 +7,34 @@
 //
 
 import XCTest
+@testable import Whitbread
 
 class VenueParserTests: XCTestCase {
 
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func test_parseEmptyDataReturnsEmptyArray() {
+        let emptyVenues = VenueParser.parseVenuesFromJSON([:])
+        XCTAssertNotNil(emptyVenues, "venues should not be nil")
+        XCTAssertEqual(emptyVenues.count, 0, "venues count should be 0")
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func test_parseWrongDataReturnsEmptyArray() {
+        let venuesDict = ["wrong" : "data"]
+        let venues = VenueParser.parseVenuesFromJSON(venuesDict)
+        XCTAssertNotNil(venues, "venues should not be nil")
+        XCTAssertEqual(venues.count, 0, "venues count should be 0")
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func test_parseOneVenueSetNameAndAddress() {
+        let venuesDict = ["venues" : [
+            ["name" : "Test name",
+             "location" : ["address" : "Test address"]]
+        ]]
+        let venues = VenueParser.parseVenuesFromJSON(venuesDict)
+        XCTAssertNotNil(venues, "venues should not be nil")
+        XCTAssertEqual(venues.count, 1, "venues count should be 1")
+        
+        let venue = venues[0]
+        XCTAssertEqual(venue.name, "Test name", "name should be Test name")
+        XCTAssertEqual(venue.address, "Test address", "address should be Test address")
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }

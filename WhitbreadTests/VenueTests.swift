@@ -12,15 +12,15 @@ import XCTest
 class VenueTests: XCTestCase {
 
     func testInit_ShouldTakeNameAndAddress() {
-        let venue = Venue(name: "Test name", formattedAddress: "Test Address")
+        let venue = Venue(name: "Test name", address: "Test Address")
         XCTAssertNotNil(venue, "venue should not be nil")
     }
     
     func testInit_ShouldSetNameAndAddress() {
-        let venue = Venue(name: "Test name", formattedAddress: "Test Address")
+        let venue = Venue(name: "Test name", address: "Test Address")
         XCTAssertEqual(venue.name , "Test name",
                        "Initializer should set the venue name")
-        XCTAssertEqual(venue.formattedAddress , "Test Address",
+        XCTAssertEqual(venue.address , "Test Address",
                        "Initializer should set the venue address")
     }
 

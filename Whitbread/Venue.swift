@@ -7,7 +7,8 @@
 //
 
 struct Venue {
+    
     let name: String
-    let formattedAddress: String
+    let address: String
 }
 

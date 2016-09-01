@@ -6,4 +6,26 @@
 //  Copyright © 2016 Antonio.Estrali. All rights reserved.
 //
 
-import Foundation
+class VenueParser {
+    
+    class func parseVenuesFromJSON(object: [String:AnyObject]) -> [Venue] {
+        
+        var venuesToReturn = [Venue]()
+        
+        guard let venues = object["venues"] as? [[String: AnyObject]] else {
+            return venuesToReturn
+        }
+        
+        for venue in venues {
+            guard let name = venue["name"] as? String,
+                  let location = venue["location"] as? [String: AnyObject],
+                  let address = location["address"] as? String else {
+                    return venuesToReturn
+            }
+            
+            venuesToReturn.append(Venue(name: name, address: address))
+        }
+        
+        return venuesToReturn
+    }
+}
